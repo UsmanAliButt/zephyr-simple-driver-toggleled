@@ -1,0 +1,21 @@
+/ {
+	
+	aliases{
+		toggle = &toggleled;
+	};
+		
+	drivertoggle{
+		compatible  	= 		"zephyr,toggle";
+		status			=		"okay";
+			toggleled:toggle_0{
+				status			=		"okay";
+				led-gpios	=			<&gpiob 2 GPIO_ACTIVE_HIGH>;
+				switch-gpios   	=       <&gpiob 4 GPIO_ACTIVE_HIGH>;
+			};
+    };
+	
+	leds{
+		status="okay";
+	};
+	
+};

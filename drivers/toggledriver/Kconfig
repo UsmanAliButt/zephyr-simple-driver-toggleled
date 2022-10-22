@@ -1,0 +1,15 @@
+# General configuration options
+
+# Copyright (c) 2014-2015 Wind River Systems, Inc.
+# SPDX-License-Identifier: Apache-2.0
+
+menuconfig TOGGLEDRIVER
+    bool "toggle driver by Usman Ali Butt"
+    depends on GPIO
+	default y
+    help
+      Enable GPIO driver GPIOX
+
+module = TOGGLEDRIVER
+module-str = toggledriver
+source "subsys/logging/Kconfig.template.log_config"	  

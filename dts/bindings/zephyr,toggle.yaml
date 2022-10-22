@@ -1,0 +1,34 @@
+# Author: Usman Ali Butt usa_butt@hotmail.com
+# Dated : 6-October-2022
+#
+#
+#drivertoggle{
+#    compatible      =      "zephyr,toggle";
+#        toggleled:drivertoggle0{
+#           led-gpios      =      <&gpiob 3 (GPIO_PULL_UP | GPIO_ACTIVE_HIGH)>;
+#           switch-gpios   =      <&gpiob 4 (GPIO_PULL_UP | GPIO_ACTIVE_HIGH)>;
+#        }
+#    };
+#
+#Device tree translation is above. We can define it in overlay file.
+description: | 
+        Toggle led driver
+
+compatible: "zephyr,toggle"
+
+include:    base.yaml
+
+child-binding:
+    description: |
+        Toggle LED child led and button nodes
+    properties:
+        led-gpios:
+            type: phandle-array
+            required:   true
+            description: |
+                Output led connected with gpio
+        switch-gpios:
+            type: phandle-array
+            required: true
+            description: |
+                Input button connected with gpio
