@@ -1,0 +1,2 @@
+west build -b nucleo_l432kc app -p -d build  -DDTC_OVERLAY_FILE="boards/toggle.overlay"
+west flash -d build
