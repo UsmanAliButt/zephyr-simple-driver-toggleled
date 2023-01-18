@@ -1,21 +1,12 @@
-/ {
-	
-	aliases{
-		toggle = &toggleled;
-	};
-		
-	drivertoggle{
-		compatible  	= 		"zephyr,toggle";
+/ {		
+	drivertoggle:ledtoggle{
+		compatible  	= 		"toggle";
 		status			=		"okay";
-			toggleled:toggle_0{
-				status			=		"okay";
-				led-gpios	=			<&gpiob 2 GPIO_ACTIVE_HIGH>;
-				switch-gpios   	=       <&gpiob 4 GPIO_ACTIVE_HIGH>;
-			};
-    };
-	
-	leds{
-		status="okay";
+		switch-gpios   	=       <&gpiob 3 GPIO_ACTIVE_HIGH>;
 	};
 	
 };
+
+//Our device node "toggle" matches the name in toggle.yaml and toggledriver.c file
+//switch-gpios is phandle passed portb gpio3 and initial status as high.
+//Note: Gpio pin3 is default connected with led on STM32 nucleo-l432kc board.

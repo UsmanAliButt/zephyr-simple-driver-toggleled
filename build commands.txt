@@ -1,2 +1,0 @@
-west build -b nucleo_l432kc app -p -d toggleleddriver\build  -DDTC_OVERLAY_FILE="boards/Toggle.overlay"
-west flash -d Toggle_led_driver\build

@@ -3,7 +3,7 @@
 
 manifest:
   self:
-    path: toggleleddriver
+    path: app
   
   remotes:
     - name: zephyrproject-rtos

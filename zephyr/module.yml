@@ -1,5 +1,5 @@
 build:
-  kconfig: C:/Users/zephyrproject/toggleleddriver/Kconfig
-  cmake: C:/Users/zephyrproject/toggleleddriver
+  kconfig: Kconfig
+  cmake: .
   settings:
     dts_root: .
