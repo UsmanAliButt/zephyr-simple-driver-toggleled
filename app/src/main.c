@@ -24,7 +24,7 @@ void main(void){
 	printk("Device is %p, name is %s\n", dev, dev->name);
 		
 	while(1){
-		alter(500);						//Alter led after ever 0.5 seconds 
+		alter(500);						//Alter led after every 0.5 seconds 
 	}
 	
 }
