@@ -1,6 +1,10 @@
 # Zephyr simple driver "toggleled"
 Adding a support to zephyr project. Driver development is not well documented and explained in zephyr project. So i decided to create a simple out of tree driver and make is public.
 <br><br>Just one GPIO pin is utilized here. Tested on physical hardware STM32 nucleol432kc board. GPIO pin-3 of module has default led connected to it.
+<br><br>Output of main.c instruction below can be viewed on UART serial terminal. I used PUTTY baudrate is set 115200 and COM port can be verified from Device Manager. 
+<code>printk("Device is %p, name is %s\n", dev, dev->name);</code>
+
+![Output on UART](Untitled.png)
 
 <h2>Folers</h2>
 <ol>
@@ -20,6 +24,3 @@ cd zephyr-simple-driver-toggleled
 west update</code>
 
 <br>prj.conf file is empty. Since GPIO's are already enabled in default board conf so not required to be enabled on prj conf. 
-
-Output of main.c instruction below can be viewed on UART serial terminal. I used PUTTY baudrate is set 115200 and COM port can be verified from Device Manager. 
-<code>printk("Device is %p, name is %s\n", dev, dev->name);</code>
